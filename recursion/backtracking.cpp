@@ -8,7 +8,7 @@ void print(int i,int n){
 }
 int main()
 {
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
     int n;
     cin>>n;
     print(n,n);
