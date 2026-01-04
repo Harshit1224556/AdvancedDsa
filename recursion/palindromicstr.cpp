@@ -14,6 +14,7 @@ bool ispalindrome(int i,string s){
     if(s[i]!=s[n-i-1]) return false;
     return ispalindrome(i+1,s);
 }
+
 int main()
 {
 
