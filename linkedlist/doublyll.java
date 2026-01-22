@@ -9,8 +9,9 @@ public class doublyll {
             this.val=val;
         }
     }
-
-    public static void display(Node head){
+       Node head = null;
+       Node tail = null;
+    public  void display(){
         Node temp = head;
         while(temp!=null)
         {
@@ -19,7 +20,7 @@ public class doublyll {
         }
     }
 
-  public static void display2(Node tail){
+  public  void display2(){
        Node temp = tail;
        while(temp!=null)
        {
@@ -28,26 +29,32 @@ public class doublyll {
        }
     }
 
-    public static void insertathead(int val)
+ public void insertathead(int val)
+ {
+    Node temp = new Node(val);
+    if(head==null)
     {
-             
-      }
+        head = tail = temp;
+    }
+    else{
+        temp.next = head;
+        head.prev = temp;
+        head = temp;
+    }
+ }
+
+
+
+  
     public static void main(String[] args) {
-        Node a =new Node(10);
-        Node b =new Node(20);
-        Node c =new Node(30);
-        Node d =new Node(40);
-        Node e =new Node(50);
-        a.next=b;
-        b.prev=a;
-        b.next = c;
-        c.prev = b;
-        c.next = d;
-        d.prev  = c;
-        d.next  = e;
-        e.prev = d;
-        display(a);
-        System.out.println("Displaying in reverse: ");
-        display2(e);
+         
+      doublyll ll = new doublyll();
+      ll.insertathead(10);
+      ll.insertathead(20);
+      ll.insertathead(30);
+      ll.insertathead(40);
+      
+      ll.display();
+      ll.display2();
     }
 }
