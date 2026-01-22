@@ -44,6 +44,17 @@ public class doublyll {
  }
 
 
+ public void insertattail(int val)
+ {      Node temp = new Node(val);
+        if(head==null){
+             head = tail = temp;
+        }
+        else{
+            tail.next = temp;
+            temp.prev = tail;
+            tail=temp;
+        }
+ }
 
   
     public static void main(String[] args) {
@@ -53,8 +64,8 @@ public class doublyll {
       ll.insertathead(20);
       ll.insertathead(30);
       ll.insertathead(40);
-      
+      ll.insertattail(50);
       ll.display();
-      ll.display2();
+     
     }
 }
