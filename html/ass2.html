@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Form</title>
+</head>
+<body>
+
+  <form>
+
+    <fieldset>
+      <legend>Your Details:</legend>
+
+      <table>
+        <tr>
+          <td><label for="name">Name:</label></td>
+          <td><input type="text" id="name" name="name" /></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="email" id="email" name="email" /></td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <br />
+
+    <fieldset>
+      <legend>Your Review:</legend>
+
+      <table>
+        <tr>
+          <td><label for="hear">How did you hear about us?</label></td>
+          <td>
+            <select id="hear" name="hear">
+              <option>Google</option>
+              <option>Facebook</option>
+              <option>Instagram</option>
+              <option>Friend</option>
+              <option>Other</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Would you visit again?</td>
+          <td>
+            <input type="radio" id="yes" name="visit" value="yes" />
+            <label for="yes">Yes</label>
+
+            <input type="radio" id="no" name="visit" value="no" />
+            <label for="no">No</label>
+
+            <input type="radio" id="maybe" name="visit" value="maybe" />
+            <label for="maybe">Maybe</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="comments">Comments:</label></td>
+          <td>
+            <textarea id="comments" name="comments" rows="5" cols="40"></textarea>
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <input type="checkbox" id="updates" name="updates" />
+            <label for="updates">Sign me up for email updates</label>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+
+</body>
+</html>

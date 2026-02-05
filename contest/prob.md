@@ -53,4 +53,4 @@ Constraints:
 1 <= costs[i], capacity[i] <= 105
 1 <= budget <= 2 * 105
  
-Copyright © 2026 LeetCode. All rights reserved.
+pair wala approach to sahi hah lekin isme bh problems hah so.....

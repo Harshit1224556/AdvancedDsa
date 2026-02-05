@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    caption {
+      caption-side: bottom;
+      text-align: left;
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 8px;
+    }
+
+    thead {
+      background-color: #1e88e5;
+      color: white;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
+
+    tfoot {
+      font-weight: bold;
+      background-color: #eee;
+    }
+
+    .right {
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <caption>
+    Showing 4 of 24 products — Page 1 of 6
+  </caption>
+
+
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th class="right">Price</th>
+      <th>Stock</th>
+      <th class="right">Rating</th>
+    </tr>
+  </thead>
+
+ 
+  <tbody>
+    <tr>
+      <td>Alpha Gadget</td>
+      <td class="right">$49.00</td>
+      <td>In stock (42)</td>
+      <td class="right">4.5</td>
+    </tr>
+    <tr>
+      <td>Beta Widget</td>
+      <td class="right">$79.00</td>
+      <td>Low stock (6)</td>
+      <td class="right">4.1</td>
+    </tr>
+    <tr>
+      <td>Gamma Tool Pro</td>
+      <td class="right">$199.99</td>
+      <td>Preorder</td>
+      <td class="right">4.8</td>
+    </tr>
+    <tr>
+      <td>Delta Accessory</td>
+      <td class="right">$9.99</td>
+      <td>In stock (324)</td>
+      <td class="right">4.0</td>
+    </tr>
+  </tbody>
+
+
+  <tfoot>
+    <tr>
+      <td>Total</td>
+      <td class="right">$337.98</td>
+      <td colspan="2"></td>
+    </tr>
+  </tfoot>
+</table>
+
+</body>
+</html>

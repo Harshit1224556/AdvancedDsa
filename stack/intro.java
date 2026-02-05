@@ -17,6 +17,14 @@ public class intro{
         st2.push(top);
 
        }
+
+       while(st2.size()>0)
+       {
+           st.push(st2.pop());
+       }
       
+
+       // i want to add get element at any index then what should i do 
+       
     }
 }

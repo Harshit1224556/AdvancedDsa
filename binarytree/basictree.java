@@ -7,8 +7,30 @@ public class basictree{
      Node(int val){
         this.val = val;
      }
-  }
 
+    
+  }
+  
+   public  static void display(Node root){
+
+          if(root==null) return;
+          System.out.print(root.val + " ");
+          display(root.left);
+          display(root.right);
+          
+
+     }
+
+     public static int size(Node root){
+         if(root==null) return 0;
+         return 1 + size(root.left) + size(root.right);
+
+     }
+
+     public static int sum(Node root){
+      if(root==null) return 0;
+       return  root.val + sum(root.left) + sum(root.right);
+     }
     public static void main(String[] args) {
         
         Node root = new Node(1);
@@ -27,8 +49,16 @@ public class basictree{
         Node g = new Node(7);
         c.left = f;
         c.right = g;
-    
-
+      //  display(root);
+      System.out.println(sum(root));
+      
 
     }
 }
+
+
+// 1
+///
+//2  3
+///
+///4 5 
