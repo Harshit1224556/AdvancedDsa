@@ -17,8 +17,17 @@ public class basictree{
           System.out.print(root.val + " ");
           display(root.left);
           display(root.right);
+
+          //this is the preorder root-left-right
           
 
+     }
+
+     public static void inorder(Node root){
+       if(root==null) return;
+       inorder(root.left);
+       System.out.println(root.val);
+       inorder(root.right);
      }
 
      public static int size(Node root){
@@ -54,6 +63,16 @@ public class basictree{
          return Math.min(root.val,Math.min(leftmin,rightmin));
 
      }
+
+
+     public static void nthlevel(Node root,int n){
+       
+        if(root==null) return;
+        if(n==1) System.out.print(root.val + " ");
+          
+          nthlevel(root.left,n-1);
+          nthlevel(root.right,n-1);
+     }
     public static void main(String[] args) {
         
         Node root = new Node(1);
@@ -77,7 +96,10 @@ public class basictree{
       // System.out.println(height(root));
       
       // System.out.println(product(root));
-      System.out.println(minval(root));
+      // System.out.println(minval(root));
+
+      // inorder(root);
+      nthlevel(root, 2);
 
     }
 }
