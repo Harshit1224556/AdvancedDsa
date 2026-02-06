@@ -27,9 +27,32 @@ public class basictree{
 
      }
 
+    
+
      public static int sum(Node root){
       if(root==null) return 0;
-       return  root.val + sum(root.left) + sum(root.right);
+       return  root.val +sum(root.left) + sum(root.right);
+     }
+
+     public static int height(Node root){
+       if(root==null) return 0;
+
+       return 1 + Math.max(height(root.left),height(root.right));
+     }
+
+     public static int product(Node root){
+       if(root==null) return 1;
+       return root.val * product(root.left) *product(root.right);
+     }
+
+     public static int minval(Node root)
+     {
+        if(root.left==null) return Integer.MAX_VALUE;
+         int leftmin = minval(root.left);
+         int rightmin = minval(root.right);
+
+         return Math.min(root.val,Math.min(leftmin,rightmin));
+
      }
     public static void main(String[] args) {
         
@@ -49,16 +72,12 @@ public class basictree{
         Node g = new Node(7);
         c.left = f;
         c.right = g;
-      //  display(root);
-      System.out.println(sum(root));
+  
+      // System.out.println(sum(root));
+      // System.out.println(height(root));
       
+      // System.out.println(product(root));
+      System.out.println(minval(root));
 
     }
 }
-
-
-// 1
-///
-//2  3
-///
-///4 5 
