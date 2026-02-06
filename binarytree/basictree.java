@@ -99,7 +99,14 @@ public class basictree{
       // System.out.println(minval(root));
 
       // inorder(root);
-      nthlevel(root, 2);
+      // nthlevel(root, 2);
 
+      int level = height(root);
+
+      for(int i=1;i<=level;i++){
+         nthlevel(root, i);
+         System.out.println();
+      
+      }
     }
 }
